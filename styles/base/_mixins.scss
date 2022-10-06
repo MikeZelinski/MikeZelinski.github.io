@@ -1,0 +1,30 @@
+@mixin ideas_grid ($col_start, $col_end, $row_start, $row_end) {
+
+    grid-column-start: $col_start;
+    grid-column-end: $col_end;
+    grid-row-start: $row_start;
+    grid-row-end: $row_end;
+}
+
+@mixin ideas_image ($url) {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_text {
+        color: white;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 26.82px;
+        text-align: center;
+        padding: 0 10px 0 10px;
+    }
+    
+    background: {
+        image: $url;
+        size: cover;
+        repeat: no-repeat;
+        position: center;
+    }
+}
